@@ -1,0 +1,27 @@
+{
+  "name": "tata-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TATA Arabic website with a protected admin dashboard and SQLite content storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "connect-sqlite3": "^0.9.15",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "better-sqlite3": "^11.10.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@11.10.0": true,
+    "sqlite3@5.1.7": true
+  }
+}

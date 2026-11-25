@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>إدارة TATA</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/admin.css"><script src="/admin.js" defer></script></head>
+<body>
+  <main class="admin-wrap">
+    <a class="back" href="/">← العودة للموقع</a>
+    <section class="panel login-panel" id="loginPanel">
+      <div class="logo">TATA<span>•</span></div><h1>لوحة التحكم</h1><p>سجّل الدخول لإدارة محتوى الموقع.</p>
+      <form id="loginForm"><label for="password">كلمة مرور المدير</label><input id="password" type="password" autocomplete="current-password" required minlength="12" maxlength="200"><button class="primary" type="submit">تسجيل الدخول</button><div class="notice" id="loginNotice" role="alert"></div></form>
+    </section>
+    <section class="dashboard hidden" id="dashboard">
+      <header class="dash-head"><div><div class="logo">TATA<span>•</span></div><h1>إدارة الموقع</h1><p>التغييرات تُحفظ في قاعدة البيانات وتظهر للزوار.</p></div><button class="logout" id="logoutButton">تسجيل الخروج</button></header>
+      <form id="contentForm" class="panel">
+        <h2>المعلومات الرئيسية</h2>
+        <div class="fields">
+          <div><label for="siteName">اسم الموقع</label><input id="siteName" maxlength="40" required></div>
+          <div><label for="ownerName">العنوان الرئيسي</label><input id="ownerName" maxlength="100"></div>
+          <div><label for="headline">العنوان الفرعي</label><input id="headline" maxlength="140"></div>
+          <div><label for="email">بريد التواصل</label><input id="email" type="email" maxlength="160"></div>
+          <div class="full"><label for="tagline">وصف الواجهة</label><textarea id="tagline" rows="2" maxlength="300"></textarea></div>
+          <div class="full"><label for="about">نبذة عن الموقع</label><textarea id="about" rows="4" maxlength="1500"></textarea></div>
+        </div>
+        <h2>المهارات</h2><p class="hint">اكتب البيانات بصيغة JSON صحيحة. كل عنصر يحتوي على title و description.</p>
+        <textarea id="skills" class="code-field" rows="8" spellcheck="false"></textarea>
+        <h2>المشاريع</h2><p class="hint">كل مشروع يحتوي على title و description و label و url اختياري. الروابط الخارجية يجب أن تبدأ بـ https://.</p>
+        <textarea id="projects" class="code-field" rows="10" spellcheck="false"></textarea>
+        <div class="form-actions"><button class="primary" type="submit" id="saveButton">حفظ التغييرات</button><span id="saveNotice" role="status"></span></div>
+      </form>
+    </section>
+  </main>
+</body></html>
